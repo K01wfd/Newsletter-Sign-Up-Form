@@ -49,15 +49,16 @@ svg {
   width: 21px;
 }
 .main-wrapper {
-  display: none;
   max-width: 1140px;
+}
+.main-wrapper.show-main-wrapper {
+  display: block;
 }
 .illustration {
   background: url('../images/illustration-sign-up-mobile.svg');
   background-position: bottom;
   background-size: cover;
   height: 284px;
-  max-height: 284px;
 }
 .main-content {
   padding-inline: 2rem;
@@ -113,11 +114,16 @@ input[type='email'] {
 input[type='email']:hover {
   border: 1px solid var(--DARK);
 }
-
+input[type='email']:focus {
+  border: 1px solid var(--DARK);
+}
 input[type='email'].input-error {
   border: 1px solid var(--TOMATO);
   color: #ff6155;
   background: rgba(255, 97, 85, 0.15);
+}
+input[type='email']:focus.input-error {
+  outline: 1px solid var(--TOMATO);
 }
 .error {
   font-size: var(--fs-small);
@@ -143,13 +149,22 @@ input[type='email'].input-error {
   cursor: pointer;
   border-radius: 1rem;
 }
-
+.btn-primary:hover {
+  background: var(--GRADIANT);
+}
 .success-container {
+  display: none;
+  max-width: 504px;
+  margin-inline: auto;
+  background: var(--WHITE);
   min-height: 80vh;
-  display: flex;
+
   flex-direction: column;
   justify-content: space-between;
   padding: 3rem 2rem;
+}
+.success-container.show-success-container {
+  display: flex;
 }
 .success__details {
   margin-top: 10rem;
@@ -166,4 +181,45 @@ input[type='email'].input-error {
 .target-email {
   font-weight: var(--fw-700);
   cursor: pointer;
+}
+.target-email:hover {
+  color: #ff6a3a;
+}
+@media screen and (min-width: 960px) {
+  body {
+    background: #36384d;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-wrapper {
+    border-radius: 3.6rem;
+    width: 100%;
+    max-width: 928px;
+    background: #fff;
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 3rem;
+    padding: 1.6rem;
+  }
+  .illustration {
+    width: 400px;
+    border-radius: 1.6rem;
+    height: 593px;
+    max-height: auto;
+  }
+  .main-content {
+    padding-inline: 4rem;
+  }
+  .success-container {
+    min-height: auto;
+    border-radius: 3.6rem;
+    padding: 4rem 6.4rem;
+    gap: 3.5rem;
+  }
+  .success__details {
+    margin-top: 0;
+  }
 }
