@@ -19,34 +19,50 @@
   </head>
   <body>
     <main>
-      <div class="container">
+      <div class="main-wrapper">
         <div class="illustration"></div>
         <div class="main-content">
-          <div class="main-content__details">
+          <div class="main-content__details vertical-spacer">
             <h1>Stay updated!</h1>
             <p>Join 60,000+ product managers receiving monthly updates on:</p>
-            <ul class="details__list">
+            <ul class="details__list vertical-spacer">
               <li class="list__item">
-                <img src="./images/icon-list.svg" alt="checkmark icon" />
+                <img
+                  class="icon"
+                  src="./images/icon-list.svg"
+                  alt="checkmark icon"
+                />
                 <p>Product discovery and building what matters</p>
               </li>
-              <li>
-                <img src="./images/icon-list.svg" alt="checkmark icon" />
+              <li class="list__item">
+                <img
+                  class="icon"
+                  src="./images/icon-list.svg"
+                  alt="checkmark icon"
+                />
                 <p>Measuring to ensure updates are a success</p>
               </li>
-              <li>
-                <img src="./images/icon-list.svg" alt="checkmark icon" />
+              <li class="list__item">
+                <img
+                  class="icon"
+                  src="./images/icon-list.svg"
+                  alt="checkmark icon"
+                />
                 <p>And much more!</p>
               </li>
             </ul>
           </div>
           <form action="" id="primaryForm">
             <div class="input-group">
-              <label for="email">Email address</label
-              ><input
+              <div class="label-group">
+                <label for="email">Email address</label>
+                <p class="error">Valid email required</p>
+              </div>
+              <input
                 type="email"
+                class=""
                 id="email"
-                placeholder="Email address email@company.com"
+                placeholder="email@company.com"
               />
             </div>
             <button class="btn-primary">Subscribe to monthly newsletter</button>
@@ -56,7 +72,7 @@
       <!--  -->
       <!-- Success message start -->
       <div class="success-container">
-        <div class="success__details">
+        <div class="success__details vertical-spacer">
           <img
             src="./images/icon-success.svg"
             class="icon-success"
@@ -64,8 +80,9 @@
           />
           <h1>Thanks for subscribing!</h1>
           <p>
-            A confirmation email has been sent to ash@loremcompany.com. Please
-            open it and click the button inside to confirm your subscription.
+            A confirmation email has been sent to
+            <span class="target-email">ash@loremcompany.com.</span> Please open
+            it and click the button inside to confirm your subscription.
           </p>
         </div>
         <button class="btn-primary">Dismiss message</button>

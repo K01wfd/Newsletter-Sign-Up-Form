@@ -42,3 +42,128 @@ svg {
   display: block;
   width: 100%;
 }
+.vertical-spacer > * + * {
+  margin-top: 1.5rem;
+}
+.icon {
+  width: 21px;
+}
+.main-wrapper {
+  display: none;
+  max-width: 1140px;
+}
+.illustration {
+  background: url('../images/illustration-sign-up-mobile.svg');
+  background-position: bottom;
+  background-size: cover;
+  height: 284px;
+  max-height: 284px;
+}
+.main-content {
+  padding-inline: 2rem;
+  padding-block: 4rem;
+}
+.main-content__details {
+  color: var(--DARK);
+}
+.main-content__details h1 {
+  margin: 0;
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-700);
+}
+.details__list {
+  list-style: none;
+  margin-top: 2.2rem;
+  margin-bottom: 4rem;
+}
+.list__item {
+  display: flex;
+  column-gap: 1.5rem;
+  align-items: flex-start;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.label-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.label-group label {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-700);
+}
+
+input[type='email'] {
+  border-radius: 8px;
+  border: 1px solid rgba(25, 24, 43, 0.25);
+  padding: 1.6rem 2.4rem;
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+input[type='email']:hover {
+  border: 1px solid var(--DARK);
+}
+
+input[type='email'].input-error {
+  border: 1px solid var(--TOMATO);
+  color: #ff6155;
+  background: rgba(255, 97, 85, 0.15);
+}
+.error {
+  font-size: var(--fs-small);
+  color: #ff6155;
+  font-weight: var(--fw-700);
+  display: none;
+}
+.input-error::placeholder {
+  color: #ff527b;
+  font-weight: 700;
+}
+.display-error {
+  display: block;
+}
+
+.btn-primary {
+  padding: 1.4rem;
+  background-color: var(--DARK);
+  font-weight: var(--fw-700);
+  color: var(--WHITE);
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.success-container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+}
+.success__details {
+  margin-top: 10rem;
+}
+.success__details h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-700);
+  line-height: 1.1;
+}
+.icon-success {
+  width: 64px;
+  margin-bottom: 4rem;
+}
+.target-email {
+  font-weight: var(--fw-700);
+  cursor: pointer;
+}
