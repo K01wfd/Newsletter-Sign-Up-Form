@@ -161,7 +161,7 @@ input[type='email']:focus.input-error {
 
   flex-direction: column;
   justify-content: space-between;
-  padding: 3rem 2rem;
+  padding: 1.5rem 2rem;
 }
 .success-container.show-success-container {
   display: flex;
